@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <h1>{{ article.title }}</h1>
+    <small>Written by
+        {{ article.author.name }}
+        on
+        {{ article.creation_date.strftime('%Y-%m-%d') }}
+    </small>
+    <hr>
+        <div>
+            {{ article.body | safe }}
+        </div>
+    {% endblock %}
